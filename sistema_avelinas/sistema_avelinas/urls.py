@@ -16,7 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from sistema_avelinas import views
+from servicios_ofrecidos import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('saludo/', views.saludar),
+    path('eliminar_especialidad<int:id2>/', views.eliminar_objeto),
+    path('crear_especialidad/', views.crear_objeto),
+    path('saludo_con_html/' views.saludar_con_html),
 ]
